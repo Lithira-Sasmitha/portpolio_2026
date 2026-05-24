@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="font-outfit font-black text-3xl gradient-text-blue mb-4">{"<Dev />"}</div>
+            <div className="font-outfit font-black text-3xl gradient-text-blue mb-4">{"Lithira Sasmitha"}</div>
             <p className="text-white/40 text-sm leading-relaxed max-w-sm mb-6">
               Crafting immersive digital experiences at the intersection of technology and creativity. Based in
               San Francisco, working with clients worldwide.
@@ -71,7 +71,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/25 text-xs font-inter">
-            © {new Date().getFullYear()} Alex Morgan. Built with React, Three.js & ❤️
+            © {new Date().getFullYear()} Lithira Sasmitha. Built with React, Three.js & ❤️
           </p>
           <motion.button
             onClick={scrollToTop}

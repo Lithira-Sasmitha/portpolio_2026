@@ -6,8 +6,8 @@ import { fadeInLeft, fadeInRight, fadeInUp } from "../animations/variants";
 import MagneticButton from "../components/ui/MagneticButton";
 
 const contactInfo = [
-  { icon: FiMail, label: "Email", value: "alex.morgan@email.com", color: "#00d4ff" },
-  { icon: FiPhone, label: "Phone", value: "+1 (555) 123-4567", color: "#7b2fff" },
+  { icon: FiMail, label: "Email", value: "lithirasasmitha@gmail.com", color: "#00d4ff" },
+  { icon: FiPhone, label: "Phone", value: "+94 70 552 2093", color: "#7b2fff" },
   { icon: FiMapPin, label: "Location", value: "San Francisco, CA", color: "#00fff2" },
 ];
 
@@ -158,8 +158,8 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
-                    <GlowInput id="name" label="Your Name" placeholder="Alex Morgan" value={form.name} onChange={update("name")} />
-                    <GlowInput id="email" type="email" label="Email Address" placeholder="alex@email.com" value={form.email} onChange={update("email")} />
+                    <GlowInput id="name" label="Your Name" placeholder="Lithira Sasmitha" value={form.name} onChange={update("name")} />
+                    <GlowInput id="email" type="email" label="Email Address" placeholder="lithirasasmitha@gmail.com" value={form.email} onChange={update("email")} />
                   </div>
                   <GlowInput id="subject" label="Subject" placeholder="Let's build something amazing..." value={form.subject} onChange={update("subject")} />
                   <GlowInput id="message" label="Message" placeholder="Tell me about your project..." textarea value={form.message} onChange={update("message")} />

@@ -56,7 +56,7 @@ export default function Navbar() {
             className="font-outfit font-bold text-xl tracking-tight gradient-text-blue text-glow-blue cursor-pointer"
             data-hover
           >
-            {"<Dev />"}
+            {"Lithira Sasmitha"}
           </motion.button>
 
           {/* Desktop Links */}

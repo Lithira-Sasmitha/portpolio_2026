@@ -10,7 +10,7 @@ const aboutStats = [
 ];
 
 const codeSnippet = `const developer = {
-  name: "Alex Morgan",
+  name: "Lithira Sasmitha",
   role: "Full Stack Engineer",
   passion: ["3D Web", "AI", "Cloud"],
   superpower: "Turning coffee
@@ -46,15 +46,21 @@ export default function About() {
               >
                 {/* Avatar */}
                 <div className="relative mx-auto w-32 h-32 mb-6">
-                  <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-5xl">
-                    👨‍💻
+                  <div className="w-32 h-32 rounded-2xl p-[2px] overflow-hidden"
+                    style={{ background: "linear-gradient(135deg, #00d4ff, #7b2fff, #00fff2)" }}
+                  >
+                    <img
+                      src="/profile.png"
+                      alt="Lithira Sasmitha"
+                      className="w-full h-full object-cover object-top rounded-[14px]"
+                    />
                   </div>
                   {/* Online indicator */}
                   <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-green-400 border-2 border-dark animate-pulse" />
                 </div>
 
                 <div className="text-center">
-                  <h3 className="font-outfit font-bold text-xl text-white mb-1">Alex Morgan</h3>
+                  <h3 className="font-outfit font-bold text-xl text-white mb-1">Lithira Sasmitha</h3>
                   <p className="text-primary text-sm mb-4">Senior Full Stack Engineer</p>
 
                   <div className="flex justify-center gap-3 mb-6">

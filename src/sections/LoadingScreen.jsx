@@ -75,7 +75,7 @@ export default function LoadingScreen({ onComplete }) {
               className="text-center"
             >
               <div className="font-outfit font-black text-5xl gradient-text text-glow-blue mb-2">
-                {"<Dev />"}
+                {"Lithira Sasmitha"}
               </div>
               <div className="text-white/40 text-sm tracking-[0.3em] uppercase font-inter">
                 Software Engineer
