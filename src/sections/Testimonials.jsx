@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiStar, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
 import { testimonials } from "../data/content";
-import { fadeInUp, scaleIn } from "../animations/variants";
+import { fadeInUp } from "../animations/variants";
 
 function StarRating({ rating }) {
   return (

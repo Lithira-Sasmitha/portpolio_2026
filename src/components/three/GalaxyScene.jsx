@@ -1,63 +1,64 @@
-import { useRef, useMemo } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+
+// Calculate galaxy coordinates once at module load to ensure component purity and avoid render-time Math.random calls
+const [positions, colors] = (() => {
+  const count = 8000;
+  const pos = new Float32Array(count * 3);
+  const col = new Float32Array(count * 3);
+
+  const colorInner = new THREE.Color("#00d4ff");
+  const colorOuter = new THREE.Color("#7b2fff");
+  const colorMid   = new THREE.Color("#00fff2");
+
+  for (let i = 0; i < count; i++) {
+    const i3 = i * 3;
+    const radius = Math.random() * 8 + 1;
+    const spinAngle = radius * 3;
+    const branchAngle = ((i % 3) / 3) * Math.PI * 2;
+
+    const randomX = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
+    const randomY = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
+    const randomZ = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
+
+    pos[i3]     = Math.cos(branchAngle + spinAngle) * radius + randomX;
+    pos[i3 + 1] = randomY * 0.5;
+    pos[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
+
+    const mixedColor = colorInner.clone();
+    const t = radius / 9;
+    if (t < 0.5) {
+      mixedColor.lerp(colorMid, t * 2);
+    } else {
+      mixedColor.lerp(colorOuter, (t - 0.5) * 2);
+    }
+
+    col[i3]     = mixedColor.r;
+    col[i3 + 1] = mixedColor.g;
+    col[i3 + 2] = mixedColor.b;
+  }
+
+  return [pos, col];
+})();
+
+const [innerPositions] = (() => {
+  const count = 2000;
+  const pos = new Float32Array(count * 3);
+
+  for (let i = 0; i < count; i++) {
+    const i3 = i * 3;
+    pos[i3]     = (Math.random() - 0.5) * 3;
+    pos[i3 + 1] = (Math.random() - 0.5) * 1;
+    pos[i3 + 2] = (Math.random() - 0.5) * 3;
+  }
+
+  return [pos];
+})();
 
 export default function GalaxyScene() {
   const points = useRef();
   const innerPoints = useRef();
-
-  const [positions, colors] = useMemo(() => {
-    const count = 8000;
-    const pos = new Float32Array(count * 3);
-    const col = new Float32Array(count * 3);
-
-    const colorInner = new THREE.Color("#00d4ff");
-    const colorOuter = new THREE.Color("#7b2fff");
-    const colorMid   = new THREE.Color("#00fff2");
-
-    for (let i = 0; i < count; i++) {
-      const i3 = i * 3;
-      const radius = Math.random() * 8 + 1;
-      const spinAngle = radius * 3;
-      const branchAngle = ((i % 3) / 3) * Math.PI * 2;
-
-      const randomX = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
-      const randomY = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
-      const randomZ = Math.pow(Math.random(), 3) * (Math.random() < 0.5 ? 1 : -1) * 0.6;
-
-      pos[i3]     = Math.cos(branchAngle + spinAngle) * radius + randomX;
-      pos[i3 + 1] = randomY * 0.5;
-      pos[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
-
-      const mixedColor = colorInner.clone();
-      const t = radius / 9;
-      if (t < 0.5) {
-        mixedColor.lerp(colorMid, t * 2);
-      } else {
-        mixedColor.lerp(colorOuter, (t - 0.5) * 2);
-      }
-
-      col[i3]     = mixedColor.r;
-      col[i3 + 1] = mixedColor.g;
-      col[i3 + 2] = mixedColor.b;
-    }
-
-    return [pos, col];
-  }, []);
-
-  const [innerPositions] = useMemo(() => {
-    const count = 2000;
-    const pos = new Float32Array(count * 3);
-
-    for (let i = 0; i < count; i++) {
-      const i3 = i * 3;
-      pos[i3]     = (Math.random() - 0.5) * 3;
-      pos[i3 + 1] = (Math.random() - 0.5) * 1;
-      pos[i3 + 2] = (Math.random() - 0.5) * 3;
-    }
-
-    return [pos];
-  }, []);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();

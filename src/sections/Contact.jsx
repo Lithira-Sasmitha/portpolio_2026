@@ -1,8 +1,8 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiSend, FiMail, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiPhone } from "react-icons/fi";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
-import { fadeInLeft, fadeInRight, fadeInUp } from "../animations/variants";
+import { fadeInLeft, fadeInRight } from "../animations/variants";
 import MagneticButton from "../components/ui/MagneticButton";
 
 const contactInfo = [
