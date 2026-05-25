@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiGithub, FiExternalLink, FiX } from "react-icons/fi";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
 import { projects, categories } from "../data/projects";
-import { fadeInUp, staggerContainer, scaleIn } from "../animations/variants";
+import { fadeInUp, staggerContainer } from "../animations/variants";
 import MagneticButton from "../components/ui/MagneticButton";
 
 function TiltCard({ project, onClick }) {

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
 import { experiences } from "../data/experience";
-import { fadeInLeft, fadeInRight, fadeInUp } from "../animations/variants";
+import { fadeInLeft, fadeInRight } from "../animations/variants";
 
 export default function Experience() {
   return (

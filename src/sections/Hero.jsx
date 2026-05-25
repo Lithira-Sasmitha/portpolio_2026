@@ -1,4 +1,4 @@
-import { useRef, Suspense, useState } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Stars, PerspectiveCamera } from "@react-three/drei";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ import { useMousePosition } from "../hooks/useMousePosition";
 import GalaxyScene from "../components/three/GalaxyScene";
 import FloatingObjects from "../components/three/FloatingObjects";
 import MagneticButton from "../components/ui/MagneticButton";
-import { fadeInUp, blurIn, staggerContainer, viewportOptions } from "../animations/variants";
+import { fadeInUp, blurIn, staggerContainer } from "../animations/variants";
 
 function HeroCanvas({ mouseX, mouseY }) {
   return (
