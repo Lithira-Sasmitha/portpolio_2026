@@ -44,7 +44,7 @@ export default function About() {
                     style={{ background: "linear-gradient(135deg, #00d4ff, #7b2fff, #00fff2)" }}
                   >
                     <img
-                      src="/profile.png"
+                      src="profile.png"
                       alt="Lithira Sasmitha"
                       className="w-full h-full object-cover object-top rounded-[14px]"
                     />
