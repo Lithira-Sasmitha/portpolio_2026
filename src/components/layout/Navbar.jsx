@@ -57,7 +57,7 @@ export default function Navbar() {
             data-hover
           >
             <div className="w-8 h-8 rounded-full overflow-hidden border border-primary/30 p-[1px] bg-dark flex-shrink-0">
-              <img src="/profile.png" alt="Lithira Sasmitha" className="w-full h-full object-cover object-top rounded-full" />
+              <img src="profile.png" alt="Lithira Sasmitha" className="w-full h-full object-cover object-top rounded-full" />
             </div>
             <span>{"Lithira Sasmitha"}</span>
           </motion.button>

@@ -296,7 +296,7 @@ export default function Hero() {
             </MagneticButton>
             <MagneticButton
               variant="glass"
-              href="/lithira_sasmitha_cv.pdf"
+              href="lithira_sasmitha_cv.pdf"
               download="Lithira_Sasmitha_CV.pdf"
               className="text-base px-8 py-4"
             >

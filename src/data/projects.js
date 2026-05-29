@@ -51,7 +51,7 @@ export const projects = [
       "A premium 3D interactive portfolio featuring custom galaxy scenes, mouse parallax, and glassmorphism layouts.",
     longDescription:
       "A highly aesthetic creative portfolio developed using React, Three.js, Framer Motion, and Tailwind CSS. Features dynamic 3D galaxy particles, customizable scrolling profiles, and an interactive references section. Fully responsive and built with modern developer workflows.",
-    image: "/profile.png",
+    image: "profile.png",
     tags: ["React", "Three.js", "Framer Motion", "Tailwind CSS", "Vite", "CI/CD"],
     category: "Web",
     github: "https://github.com/Lithira-Sasmitha/portpolio_2026",
