@@ -6,7 +6,7 @@ import { projects, categories } from "../data/projects";
 import { fadeInUp, staggerContainer } from "../animations/variants";
 import MagneticButton from "../components/ui/MagneticButton";
 
-function TiltCard({ project, onClick }) {
+function TiltCard({ project, onClick, onPrivateClick }) {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -117,16 +117,29 @@ function TiltCard({ project, onClick }) {
 
         {/* Links */}
         <div className="flex items-center gap-3">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors"
-            data-hover
-          >
-            <FiGithub size={14} /> Code
-          </a>
+          {project.isPrivate ? (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onPrivateClick(project.title);
+              }}
+              className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+              data-hover
+            >
+              <FiGithub size={14} /> Code (Private)
+            </button>
+          ) : (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors"
+              data-hover
+            >
+              <FiGithub size={14} /> Code
+            </a>
+          )}
           <a
             href={project.live}
             target="_blank"
@@ -147,7 +160,7 @@ function TiltCard({ project, onClick }) {
   );
 }
 
-function ProjectModal({ project, onClose }) {
+function ProjectModal({ project, onClose, onPrivateClick }) {
   if (!project) return null;
   return (
     <motion.div
@@ -196,9 +209,19 @@ function ProjectModal({ project, onClose }) {
         </div>
 
         <div className="flex gap-4">
-          <MagneticButton href={project.github} target="_blank" variant="glass" className="flex-1 justify-center">
-            <FiGithub size={16} /> View Code
-          </MagneticButton>
+          {project.isPrivate ? (
+            <MagneticButton
+              onClick={() => onPrivateClick(project.title)}
+              variant="glass"
+              className="flex-1 justify-center"
+            >
+              <FiGithub size={16} /> Code (Private)
+            </MagneticButton>
+          ) : (
+            <MagneticButton href={project.github} target="_blank" variant="glass" className="flex-1 justify-center">
+              <FiGithub size={16} /> View Code
+            </MagneticButton>
+          )}
           <MagneticButton href={project.live} target="_blank" variant="primary" className="flex-1 justify-center">
             <FiExternalLink size={16} /> Live Demo
           </MagneticButton>
@@ -211,6 +234,7 @@ function ProjectModal({ project, onClose }) {
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
+  const [privateToast, setPrivateToast] = useState(null);
 
   const filtered =
     activeCategory === "All"
@@ -261,6 +285,7 @@ export default function Projects() {
                   key={project.id}
                   project={project}
                   onClick={() => setSelectedProject(project)}
+                  onPrivateClick={(title) => setPrivateToast(title)}
                 />
               ))}
             </motion.div>
@@ -274,7 +299,62 @@ export default function Projects() {
           <ProjectModal
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
+            onPrivateClick={(title) => setPrivateToast(title)}
           />
+        )}
+      </AnimatePresence>
+
+      {/* Private Project Code Alert Toast */}
+      <AnimatePresence>
+        {privateToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-10 right-10 z-[200] max-w-sm w-full"
+          >
+            <div className="glass p-5 rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex gap-4 items-start relative overflow-hidden">
+              {/* Radial gradient background to match theme */}
+              <div
+                className="absolute inset-0 opacity-10 pointer-events-none"
+                style={{
+                  background: `radial-gradient(circle at 100% 100%, #a855f7, transparent 70%)`,
+                }}
+              />
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 flex-shrink-0">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <h5 className="font-outfit font-bold text-white text-sm mb-1">Confidential Project</h5>
+                <p className="text-white/60 text-xs leading-relaxed">
+                  The source code for <strong className="text-white font-semibold">{privateToast}</strong> belongs to the client and cannot be shared publicly.
+                </p>
+              </div>
+              <button
+                onClick={() => setPrivateToast(null)}
+                className="text-white/40 hover:text-white text-xs p-1"
+              >
+                <FiX size={14} />
+              </button>
+              {/* Auto progress bar to close the toast */}
+              <motion.div
+                initial={{ width: "100%" }}
+                animate={{ width: "0%" }}
+                transition={{ duration: 4.5, ease: "linear" }}
+                onAnimationComplete={() => setPrivateToast(null)}
+                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-500 to-indigo-500"
+              />
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

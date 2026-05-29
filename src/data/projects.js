@@ -12,6 +12,7 @@ export const projects = [
     github: "https://github.com/Lithira-Sasmitha",
     live: "https://github.com/Lithira-Sasmitha",
     featured: true,
+    isPrivate: true,
     color: "#00d4ff",
   },
   {
@@ -27,6 +28,7 @@ export const projects = [
     github: "https://github.com/Lithira-Sasmitha",
     live: "https://github.com/Lithira-Sasmitha",
     featured: true,
+    isPrivate: true,
     color: "#7b2fff",
   },
   {
