@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
-import { fadeInLeft, fadeInRight, fadeInUp, staggerContainer } from "../animations/variants";
+import { fadeInLeft, fadeInRight } from "../animations/variants";
 
-const aboutStats = [
-  { icon: "🚀", label: "Projects", value: "50+" },
-  { icon: "☕", label: "Cups of Coffee", value: "∞" },
-  { icon: "🌍", label: "Countries Worked", value: "8" },
-  { icon: "⭐", label: "GitHub Stars", value: "2K+" },
-];
 
 const codeSnippet = `const developer = {
   name: "Lithira Sasmitha",
@@ -64,7 +58,7 @@ export default function About() {
                   <p className="text-primary text-sm mb-4">Full Stack Engineer</p>
 
                   <div className="flex justify-center gap-3 mb-6">
-                    {["React", "Node", "AWS"].map((tag) => (
+                    {["React", "Node", "Flutter"].map((tag) => (
                       <span key={tag} className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs">
                         {tag}
                       </span>
@@ -83,18 +77,18 @@ export default function About() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -top-6 -right-8 glass rounded-xl p-4 border border-primary/20"
+                className="absolute -top-6 -right-2 md:-right-8 glass rounded-xl p-4 border border-primary/20"
               >
-                <div className="text-2xl font-outfit font-black text-primary">50+</div>
+                <div className="text-2xl font-outfit font-black text-primary">10+</div>
                 <div className="text-white/50 text-xs">Projects Done</div>
               </motion.div>
 
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-6 -left-8 glass rounded-xl p-4 border border-secondary/20"
+                className="absolute -bottom-6 -left-2 md:-left-8 glass rounded-xl p-4 border border-secondary/20"
               >
-                <div className="text-2xl font-outfit font-black text-secondary">2+</div>
+                <div className="text-2xl font-outfit font-black text-secondary">1+</div>
                 <div className="text-white/50 text-xs">Years Exp.</div>
               </motion.div>
             </div>
@@ -104,7 +98,7 @@ export default function About() {
           <motion.div variants={fadeInRight} className="space-y-8">
             <div className="space-y-5 text-white/70 font-inter leading-relaxed">
               <p className="text-lg">
-                With over <span className="text-primary font-semibold">2 years of experience</span> crafting
+                With over <span className="text-primary font-semibold">1+ years of experience</span> crafting
                 production-grade software, I specialize in building systems that scale, interfaces that delight,
                 and experiences that leave an impression.
               </p>
@@ -122,24 +116,7 @@ export default function About() {
               </p>
             </div>
 
-            {/* Stats row */}
-            <motion.div
-              variants={staggerContainer}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4"
-            >
-              {aboutStats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  className="glass rounded-xl p-4 text-center border border-white/5 hover:border-primary/20 transition-all duration-300 group"
-                >
-                  <div className="text-2xl mb-2">{stat.icon}</div>
-                  <div className="font-outfit font-bold text-xl gradient-text">{stat.value}</div>
-                  <div className="text-white/40 text-xs mt-1">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
+
 
             {/* Timeline highlights */}
             <div className="space-y-4">

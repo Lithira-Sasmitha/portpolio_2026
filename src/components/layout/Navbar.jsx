@@ -53,10 +53,13 @@ export default function Navbar() {
             onClick={() => scrollTo("hero")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="font-outfit font-bold text-xl tracking-tight gradient-text-blue text-glow-blue cursor-pointer"
+            className="flex items-center gap-2.5 font-outfit font-bold text-xl tracking-tight gradient-text-blue text-glow-blue cursor-pointer"
             data-hover
           >
-            {"Lithira Sasmitha"}
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-primary/30 p-[1px] bg-dark flex-shrink-0">
+              <img src="/profile.png" alt="Lithira Sasmitha" className="w-full h-full object-cover object-top rounded-full" />
+            </div>
+            <span>{"Lithira Sasmitha"}</span>
           </motion.button>
 
           {/* Desktop Links */}

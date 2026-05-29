@@ -60,15 +60,26 @@ function TiltCard({ project, onClick }) {
             <div className="w-2 h-2 rounded-full bg-green-400/60" />
             <div className="flex-1 h-1.5 rounded bg-white/10 ml-2" />
           </div>
-          <div className="space-y-1.5">
-            <div className="h-2 rounded bg-white/10 w-3/4" />
-            <div className="h-2 rounded bg-white/5 w-full" />
-            <div className="h-2 rounded bg-white/5 w-5/6" />
-            <div className="mt-3 grid grid-cols-2 gap-1.5">
-              <div className="h-8 rounded" style={{ background: `${project.color}30` }} />
-              <div className="h-8 rounded bg-white/5" />
+          {project.image ? (
+            <div className="h-20 rounded-md overflow-hidden relative border border-white/5 bg-dark">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
-          </div>
+          ) : (
+            <div className="space-y-1.5">
+              <div className="h-2 rounded bg-white/10 w-3/4" />
+              <div className="h-2 rounded bg-white/5 w-full" />
+              <div className="h-2 rounded bg-white/5 w-5/6" />
+              <div className="mt-3 grid grid-cols-2 gap-1.5">
+                <div className="h-8 rounded" style={{ background: `${project.color}30` }} />
+                <div className="h-8 rounded bg-white/5" />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Category badge */}

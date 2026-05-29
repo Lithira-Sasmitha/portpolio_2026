@@ -22,7 +22,7 @@ export default function Experience() {
             {experiences.map((exp, i) => {
               const isLeft = i % 2 === 0;
               return (
-                <div key={exp.id} className="relative flex items-start gap-6 md:gap-0">
+                <div key={exp.id} className="relative flex items-start md:gap-0">
                   {/* Timeline dot */}
                   <div className="absolute left-0 md:left-1/2 -translate-x-0 md:-translate-x-1/2 z-10 mt-6">
                     <motion.div
@@ -44,7 +44,7 @@ export default function Experience() {
                   {/* Card — alternating sides on desktop */}
                   <motion.div
                     variants={isLeft ? fadeInLeft : fadeInRight}
-                    className={`ml-16 md:ml-0 md:w-[calc(50%-40px)] ${
+                    className={`w-full pl-14 md:pl-0 md:w-[calc(50%-40px)] ${
                       isLeft ? "md:mr-auto" : "md:ml-auto"
                     }`}
                   >
@@ -59,7 +59,7 @@ export default function Experience() {
                       />
 
                       {/* Header */}
-                      <div className="flex items-start justify-between gap-4 mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
                         <div>
                           <h3 className="font-outfit font-bold text-white text-lg leading-tight">
                             {exp.role}
@@ -73,7 +73,7 @@ export default function Experience() {
                           </div>
                         </div>
                         <span
-                          className="flex-shrink-0 text-xs px-3 py-1 rounded-full font-mono whitespace-nowrap"
+                          className="self-start sm:self-auto flex-shrink-0 text-xs px-3 py-1 rounded-full font-mono whitespace-nowrap"
                           style={{
                             background: `${exp.color}15`,
                             color: exp.color,

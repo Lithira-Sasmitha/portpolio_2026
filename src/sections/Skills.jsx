@@ -109,14 +109,11 @@ export default function Skills() {
           <div>
             <h4 className="font-outfit font-semibold text-white mb-1">Always Learning</h4>
             <p className="text-white/50 text-sm">
-              Currently exploring: <span className="text-primary">Rust</span>,{" "}
-              <span className="text-secondary">WebGPU</span>,{" "}
-              <span className="text-accent">Quantum Computing</span>, and{" "}
-              <span className="text-orange-400">LLM Fine-tuning</span>.
+              Currently exploring: <span className="text-orange-400">LLM Fine-tuning</span>.
             </p>
           </div>
           <div className="sm:ml-auto flex gap-2 flex-wrap justify-center">
-            {["Rust", "WebGPU", "LLMs", "Quantum"].map((tag) => (
+            {["LLMs"].map((tag) => (
               <span key={tag} className="px-3 py-1 rounded-full glass border border-white/10 text-white/60 text-xs">
                 {tag}
               </span>

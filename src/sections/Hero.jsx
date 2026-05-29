@@ -108,7 +108,7 @@ function HeroProfileImage() {
         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -top-2 -right-4 md:-right-8 glass rounded-xl px-4 py-3 border border-primary/30 shadow-[0_8px_30px_rgba(0,212,255,0.15)]"
       >
-        <div className="text-xl font-outfit font-black text-primary">50+</div>
+        <div className="text-xl font-outfit font-black text-primary">10+</div>
         <div className="text-[10px] text-white/50 font-inter">Projects</div>
       </motion.div>
 
@@ -118,7 +118,7 @@ function HeroProfileImage() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         className="absolute -bottom-2 -left-4 md:-left-8 glass rounded-xl px-4 py-3 border border-secondary/30 shadow-[0_8px_30px_rgba(123,47,255,0.15)]"
       >
-        <div className="text-xl font-outfit font-black text-secondary">2+</div>
+        <div className="text-xl font-outfit font-black text-secondary">1+</div>
         <div className="text-[10px] text-white/50 font-inter">Years Exp.</div>
       </motion.div>
 
@@ -294,6 +294,14 @@ export default function Hero() {
             >
               Get In Touch
             </MagneticButton>
+            <MagneticButton
+              variant="glass"
+              href="/lithira_sasmitha_cv.pdf"
+              download="Lithira_Sasmitha_CV.pdf"
+              className="text-base px-8 py-4"
+            >
+              Download CV 📥
+            </MagneticButton>
           </motion.div>
 
           {/* Social links */}
@@ -316,7 +324,7 @@ export default function Hero() {
 
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent ml-2" />
 
-            <div className="text-white/40 text-sm font-inter">2+ Years Experience</div>
+            <div className="text-white/40 text-sm font-inter">1+ Years Experience</div>
           </motion.div>
         </motion.div>
 
