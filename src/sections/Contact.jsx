@@ -55,10 +55,49 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1800));
-    setSending(false);
-    setSent(true);
-    setForm({ name: "", email: "", subject: "", message: "" });
+
+    // To receive real emails, get a FREE access key from https://web3forms.com
+    // and replace "YOUR_ACCESS_KEY_HERE" with your key.
+    const accessKey = "0ac5eea5-8447-4d87-8c27-0427e63b20a4"; 
+
+    if (accessKey === "YOUR_ACCESS_KEY_HERE" || !accessKey) {
+      // Fallback mock submission when testing without a key
+      await new Promise((r) => setTimeout(r, 1500));
+      setSending(false);
+      setSent(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Form submission failed. Please check your Web3Forms Access Key.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Network error. Please try again or contact me directly at lithirasasmitha04@gmail.com");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
