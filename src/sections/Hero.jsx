@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Stars, PerspectiveCamera } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiArrowDown, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiArrowDown, FiGithub, FiLinkedin } from "react-icons/fi";
 import { useMousePosition } from "../hooks/useMousePosition";
 import GalaxyScene from "../components/three/GalaxyScene";
 import FloatingObjects from "../components/three/FloatingObjects";
@@ -118,7 +118,7 @@ function HeroProfileImage() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         className="absolute -bottom-2 -left-4 md:-left-8 glass rounded-xl px-4 py-3 border border-secondary/30 shadow-[0_8px_30px_rgba(123,47,255,0.15)]"
       >
-        <div className="text-xl font-outfit font-black text-secondary">6+</div>
+        <div className="text-xl font-outfit font-black text-secondary">2+</div>
         <div className="text-[10px] text-white/50 font-inter">Years Exp.</div>
       </motion.div>
 
@@ -143,9 +143,8 @@ export default function Hero() {
   };
 
   const socialLinks = [
-    { icon: FiGithub,   href: "https://github.com",   label: "GitHub" },
-    { icon: FiLinkedin, href: "https://linkedin.com",  label: "LinkedIn" },
-    { icon: FiTwitter,  href: "https://twitter.com",   label: "Twitter" },
+    { icon: FiGithub,   href: "https://github.com/Lithira-Sasmitha",   label: "GitHub" },
+    { icon: FiLinkedin, href: "https://linkedin.com/in/lithira-sasmitha",  label: "LinkedIn" },
   ];
 
   return (
@@ -317,7 +316,7 @@ export default function Hero() {
 
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent ml-2" />
 
-            <div className="text-white/40 text-sm font-inter">6+ Years Experience</div>
+            <div className="text-white/40 text-sm font-inter">2+ Years Experience</div>
           </motion.div>
         </motion.div>
 

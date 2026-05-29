@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiSend, FiMail, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiPhone } from "react-icons/fi";
+import { FiSend, FiMail, FiMapPin, FiGithub, FiLinkedin, FiPhone } from "react-icons/fi";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
 import { fadeInLeft, fadeInRight } from "../animations/variants";
 import MagneticButton from "../components/ui/MagneticButton";
 
 const contactInfo = [
-  { icon: FiMail, label: "Email", value: "lithirasasmitha@gmail.com", color: "#00d4ff" },
+  { icon: FiMail, label: "Email", value: "lithirasasmitha04@gmail.com", color: "#00d4ff" },
   { icon: FiPhone, label: "Phone", value: "+94 70 552 2093", color: "#7b2fff" },
-  { icon: FiMapPin, label: "Location", value: "San Francisco, CA", color: "#00fff2" },
+  { icon: FiMapPin, label: "Location", value: "Walasmulla, Hambanthota", color: "#00fff2" },
 ];
 
 const socialLinks = [
-  { icon: FiGithub, href: "https://github.com", label: "GitHub", color: "#ffffff" },
-  { icon: FiLinkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0077b5" },
-  { icon: FiTwitter, href: "https://twitter.com", label: "Twitter", color: "#1da1f2" },
+  { icon: FiGithub, href: "https://github.com/Lithira-Sasmitha", label: "GitHub", color: "#ffffff" },
+  { icon: FiLinkedin, href: "https://linkedin.com/in/lithira-sasmitha", label: "LinkedIn", color: "#0077b5" },
 ];
 
 function GlowInput({ label, id, type = "text", placeholder, textarea, value, onChange }) {
@@ -159,7 +158,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <GlowInput id="name" label="Your Name" placeholder="Lithira Sasmitha" value={form.name} onChange={update("name")} />
-                    <GlowInput id="email" type="email" label="Email Address" placeholder="lithirasasmitha@gmail.com" value={form.email} onChange={update("email")} />
+                    <GlowInput id="email" type="email" label="Email Address" placeholder="lithirasasmitha04@gmail.com" value={form.email} onChange={update("email")} />
                   </div>
                   <GlowInput id="subject" label="Subject" placeholder="Let's build something amazing..." value={form.subject} onChange={update("subject")} />
                   <GlowInput id="message" label="Message" placeholder="Tell me about your project..." textarea value={form.message} onChange={update("message")} />
