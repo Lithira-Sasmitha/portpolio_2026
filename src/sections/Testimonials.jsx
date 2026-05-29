@@ -41,16 +41,7 @@ export default function Testimonials() {
                   style={{ background: `radial-gradient(circle at 10% 10%, ${t.color}, transparent 60%)` }}
                 />
 
-                <div className="font-mono text-primary text-sm md:text-base leading-relaxed mt-2 mb-8 relative z-10 flex flex-col gap-3">
-                  {t.text.split("•").map((info, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <span className="text-primary/70">⚡</span>
-                      <span className="text-white/80 font-inter">{info.trim()}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-6 relative z-10">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center font-outfit font-bold text-sm"
                     style={{ background: `${t.color}20`, color: t.color, border: `1px solid ${t.color}30` }}
@@ -58,9 +49,18 @@ export default function Testimonials() {
                     {t.avatar}
                   </div>
                   <div>
-                    <div className="font-outfit font-bold text-white">{t.name}</div>
+                    <div className="font-outfit font-bold text-white text-lg">{t.name}</div>
                     <div className="text-sm" style={{ color: t.color }}>{t.role}</div>
                   </div>
+                </div>
+
+                <div className="font-mono text-primary text-sm md:text-base leading-relaxed mt-4 relative z-10 flex flex-col gap-2.5">
+                  {t.text.split("•").map((info, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <span className="text-primary/70">⚡</span>
+                      <span className="text-white/80 font-inter">{info.trim()}</span>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             </AnimatePresence>
