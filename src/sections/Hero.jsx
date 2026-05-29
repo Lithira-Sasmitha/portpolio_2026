@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Stars, PerspectiveCamera } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiArrowDown, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiArrowDown, FiGithub, FiLinkedin } from "react-icons/fi";
 import { useMousePosition } from "../hooks/useMousePosition";
 import GalaxyScene from "../components/three/GalaxyScene";
 import FloatingObjects from "../components/three/FloatingObjects";

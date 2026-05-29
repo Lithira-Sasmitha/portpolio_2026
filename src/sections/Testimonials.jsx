@@ -1,19 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiStar, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import SectionWrapper, { SectionHeader } from "../components/ui/SectionWrapper";
 import { testimonials } from "../data/content";
 import { fadeInUp } from "../animations/variants";
 
-function StarRating({ rating }) {
-  return (
-    <div className="flex gap-1">
-      {Array.from({ length: rating }).map((_, i) => (
-        <FiStar key={i} size={14} className="text-yellow-400 fill-yellow-400" />
-      ))}
-    </div>
-  );
-}
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);

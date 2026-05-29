@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Online Movie & TV Series System",
+    title: "ONLINE MOVIE SYSTEM",
     description:
       "A modular web platform using Java and MVC architecture, featuring CRUD operations, MySQL, and OOP principles.",
     longDescription:
@@ -43,6 +43,21 @@ export const projects = [
     live: "https://github.com/Lithira-Sasmitha",
     featured: true,
     color: "#00fff2",
+  },
+  {
+    id: 4,
+    title: "3D DEVELOPER PORTFOLIO",
+    description:
+      "A premium 3D interactive portfolio featuring custom galaxy scenes, mouse parallax, and glassmorphism layouts.",
+    longDescription:
+      "A highly aesthetic creative portfolio developed using React, Three.js, Framer Motion, and Tailwind CSS. Features dynamic 3D galaxy particles, customizable scrolling profiles, and an interactive references section. Fully responsive and built with modern developer workflows.",
+    image: null,
+    tags: ["React", "Three.js", "Framer Motion", "Tailwind CSS", "Vite"],
+    category: "Web",
+    github: "https://github.com/Lithira-Sasmitha/portpolio_2026",
+    live: "https://github.com/Lithira-Sasmitha/portpolio_2026",
+    featured: true,
+    color: "#a855f7",
   },
 ];
 
