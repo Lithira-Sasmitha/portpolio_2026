@@ -3,9 +3,9 @@ export const projects = [
     id: 1,
     title: "PRIMEHIVE",
     description:
-      "An IoT Smart Home Security Management System enabling real-time monitoring, zone-based grouping, and remote control of smart devices.",
+      "Developed the mobile app and secure Nest.js backend for an IoT Smart Home Security System, featuring real-time device control and telemetry.",
     longDescription:
-      "A robust IoT Smart Home Management System that enables real-time monitoring and remote control of connected devices through a scalable and responsive platform. Implemented Remote Procedure Call (RPC) for device control and developed a secure state management system, while integrating telemetry for real-time state synchronization. Supports zone-based device grouping, automation with triggers and scheduling, real-time alerts, and auto-calling for critical events. Leveraged ThingsBoard for device management and remote monitoring, ensuring reliable command execution and accurate response handling.",
+      "Designed and built the cross-platform Flutter mobile application and the Nest.js backend architecture for an IoT Smart Home System. Developed secure REST APIs and WebSockets to establish real-time, two-way communication between the mobile app and the cloud. Implemented Remote Procedure Call (RPC) integrations via ThingsBoard for remote device control, and engineered telemetry synchronization using MongoDB to handle real-time status updates, zone-based device management, and automation triggers.",
     image: null,
     tags: ["Flutter", "Nest.js", "MongoDB", "ThingsBoard", "RPC", "WebSockets", "JWT"],
     category: "IoT",
