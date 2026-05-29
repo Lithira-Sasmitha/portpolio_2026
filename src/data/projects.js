@@ -1,94 +1,49 @@
 export const projects = [
   {
     id: 1,
-    title: "NexusAI Dashboard",
+    title: "PRIMEHIVE",
     description:
-      "An AI-powered analytics platform with real-time data visualization, ML model monitoring, and intelligent alerting. Built for enterprise-scale data teams.",
+      "An IoT Smart Home Security Management System enabling real-time monitoring, zone-based grouping, and remote control of smart devices.",
     longDescription:
-      "A comprehensive AI dashboard that integrates with multiple ML frameworks, providing real-time insights, model performance tracking, and automated anomaly detection. Features a sleek dark interface with interactive D3.js charts.",
+      "A robust IoT Smart Home Management System that enables real-time monitoring and remote control of connected devices through a scalable and responsive platform. Implemented Remote Procedure Call (RPC) for device control and developed a secure state management system, while integrating telemetry for real-time state synchronization. Supports zone-based device grouping, automation with triggers and scheduling, real-time alerts, and auto-calling for critical events. Leveraged ThingsBoard for device management and remote monitoring, ensuring reliable command execution and accurate response handling.",
     image: null,
-    tags: ["React", "Python", "TensorFlow", "D3.js", "PostgreSQL", "Docker"],
-    category: "AI / ML",
-    github: "https://github.com",
-    live: "https://demo.example.com",
+    tags: ["Flutter", "Nest.js", "MongoDB", "ThingsBoard", "RPC", "WebSockets", "JWT"],
+    category: "IoT",
+    github: "https://github.com/Lithira-Sasmitha",
+    live: "https://github.com/Lithira-Sasmitha",
     featured: true,
     color: "#00d4ff",
   },
   {
     id: 2,
-    title: "Orbit E-Commerce",
+    title: "CEY COIR",
     description:
-      "A high-performance e-commerce platform with 3D product previews, AR try-on features, and AI-driven personalization engine.",
+      "An Enterprise Management System focusing on income/expense state management, salary processing, QR payments, and financial charts.",
     longDescription:
-      "Full-stack e-commerce solution featuring Three.js powered 3D product views, WebXR AR capabilities, Stripe payments, and a custom recommendation engine. Handles 100k+ concurrent users.",
+      "Worked on the finance management module of this enterprise-grade system. Focused on income and expense handling using client-side and server-side state management. Implemented secure salary management features and enabled automated payment slip generation with dynamic QR codes and PDF export. Also contributed to improving the user experience with interactive charts for better financial visualization.",
     image: null,
-    tags: ["Next.js", "Three.js", "Node.js", "MongoDB", "Stripe", "Redis"],
+    tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
     category: "Full Stack",
-    github: "https://github.com",
-    live: "https://demo.example.com",
+    github: "https://github.com/Lithira-Sasmitha",
+    live: "https://github.com/Lithira-Sasmitha",
     featured: true,
     color: "#7b2fff",
   },
   {
     id: 3,
-    title: "CipherChat",
+    title: "Online Movie & TV Series System",
     description:
-      "End-to-end encrypted real-time messaging app with ephemeral rooms, voice calls, and blockchain-based identity verification.",
+      "A modular web platform using Java and MVC architecture, featuring CRUD operations, MySQL, and OOP principles.",
     longDescription:
-      "Secure messaging application using Signal Protocol for E2E encryption, WebRTC for peer-to-peer voice/video, and Ethereum for decentralized identity. Features self-destructing messages and zero-knowledge proofs.",
+      "Designed and developed a modular web system using Java and the Model-View-Controller (MVC) architecture. Implemented comprehensive CRUD functionalities with backend logic in Servlets and JDBC, and managed the database through phpMyAdmin during early stages, later migrating to MySQL. Applied object-oriented programming (OOP) principles to structure the application for maximum maintainability and scalability.",
     image: null,
-    tags: ["React Native", "WebRTC", "Socket.io", "Ethereum", "Go", "Redis"],
-    category: "Mobile",
-    github: "https://github.com",
-    live: "https://demo.example.com",
+    tags: ["Java", "MySQL", "HTML", "CSS", "JavaScript"],
+    category: "Web",
+    github: "https://github.com/Lithira-Sasmitha",
+    live: "https://github.com/Lithira-Sasmitha",
     featured: true,
     color: "#00fff2",
   },
-  {
-    id: 4,
-    title: "CloudForge DevOps",
-    description:
-      "Infrastructure-as-code platform with visual pipeline builder, Kubernetes orchestration, and automated cost optimization.",
-    longDescription:
-      "Enterprise DevOps platform with drag-and-drop CI/CD pipeline builder, multi-cloud Kubernetes management, intelligent resource scaling, and real-time cost analytics with ML-driven optimization suggestions.",
-    image: null,
-    tags: ["Vue.js", "Kubernetes", "Terraform", "Golang", "AWS", "Grafana"],
-    category: "DevOps",
-    github: "https://github.com",
-    live: "https://demo.example.com",
-    featured: false,
-    color: "#ff6b35",
-  },
-  {
-    id: 5,
-    title: "NeuroNote",
-    description:
-      "AI-powered note-taking app with semantic search, auto-tagging, mind-map visualization, and GPT-4 writing assistant.",
-    longDescription:
-      "Intelligent knowledge management system using OpenAI embeddings for semantic search, automatic concept extraction, and an interactive graph-based mind map. Supports rich markdown, code blocks, and collaborative editing.",
-    image: null,
-    tags: ["React", "OpenAI", "Supabase", "TypeScript", "Langchain", "D3.js"],
-    category: "AI / ML",
-    github: "https://github.com",
-    live: "https://demo.example.com",
-    featured: false,
-    color: "#a855f7",
-  },
-  {
-    id: 6,
-    title: "QuantumPay",
-    description:
-      "Cross-chain DeFi payment gateway with instant settlement, multi-wallet support, and gasless transactions via meta-transactions.",
-    longDescription:
-      "Decentralized payment infrastructure supporting 12+ blockchain networks, ERC-4337 account abstraction for gasless UX, real-time fiat on/off ramps, and enterprise-grade compliance tools.",
-    image: null,
-    tags: ["React", "Solidity", "ethers.js", "Hardhat", "Chainlink", "IPFS"],
-    category: "Blockchain",
-    github: "https://github.com",
-    live: "https://demo.example.com",
-    featured: false,
-    color: "#f59e0b",
-  },
 ];
 
-export const categories = ["All", "AI / ML", "Full Stack", "Mobile", "DevOps", "Blockchain"];
+export const categories = ["All", "Full Stack", "IoT", "Web"];

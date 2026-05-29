@@ -61,7 +61,7 @@ export default function About() {
 
                 <div className="text-center">
                   <h3 className="font-outfit font-bold text-xl text-white mb-1">Lithira Sasmitha</h3>
-                  <p className="text-primary text-sm mb-4">Senior Full Stack Engineer</p>
+                  <p className="text-primary text-sm mb-4">Full Stack Engineer</p>
 
                   <div className="flex justify-center gap-3 mb-6">
                     {["React", "Node", "AWS"].map((tag) => (
@@ -94,7 +94,7 @@ export default function About() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute -bottom-6 -left-8 glass rounded-xl p-4 border border-secondary/20"
               >
-                <div className="text-2xl font-outfit font-black text-secondary">6+</div>
+                <div className="text-2xl font-outfit font-black text-secondary">2+</div>
                 <div className="text-white/50 text-xs">Years Exp.</div>
               </motion.div>
             </div>
@@ -104,7 +104,7 @@ export default function About() {
           <motion.div variants={fadeInRight} className="space-y-8">
             <div className="space-y-5 text-white/70 font-inter leading-relaxed">
               <p className="text-lg">
-                With over <span className="text-primary font-semibold">6 years of experience</span> crafting
+                With over <span className="text-primary font-semibold">2 years of experience</span> crafting
                 production-grade software, I specialize in building systems that scale, interfaces that delight,
                 and experiences that leave an impression.
               </p>
@@ -145,10 +145,10 @@ export default function About() {
             <div className="space-y-4">
               <h4 className="font-outfit font-semibold text-white text-lg">My Journey</h4>
               {[
-                { year: "2019", event: "Graduated CS from MIT, started first dev role", color: "#ff6b35" },
-                { year: "2021", event: "Joined Quantum Labs, built AI fintech products", color: "#7b2fff" },
-                { year: "2023", event: "Promoted to Senior Engineer at NovaTech Systems", color: "#00d4ff" },
-                { year: "Now",  event: "Building the future, one component at a time", color: "#00fff2" },
+                { year: "2014", event: "Entered Walasmulla National School, beginning physical science path", color: "#ff6b35" },
+                { year: "2023", event: "Joined SLIIT to pursue B.Sc. (Hons) in Software Engineering", color: "#7b2fff" },
+                { year: "2025", event: "Began Software Engineering internship at Hastiyait (PVT) Ltd", color: "#00d4ff" },
+                { year: "Now",  event: "Building responsive, modern IoT & full stack solutions", color: "#00fff2" },
               ].map((item) => (
                 <div key={item.year} className="flex items-start gap-4 group">
                   <div
