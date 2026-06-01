@@ -25,10 +25,9 @@ export const projects = [
     image: null,
     tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
     category: "Full Stack",
-    github: "https://github.com/Lithira-Sasmitha",
-    live: "https://github.com/Lithira-Sasmitha",
+    github: "https://github.com/Lithira-Sasmitha/ITP",
+    live: "https://github.com/Lithira-Sasmitha/ITP",
     featured: true,
-    isPrivate: true,
     color: "#7b2fff",
   },
   {
