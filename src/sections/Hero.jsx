@@ -269,10 +269,17 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-white/60 font-inter text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10"
           >
-            I craft immersive digital experiences at the intersection of{" "}
-            <span className="text-primary">cutting-edge technology</span> and{" "}
-            <span className="text-secondary">creative design</span>. From 3D web
-            worlds to scalable cloud systems.
+            I specialize in{" "}
+            <span className="text-primary font-semibold">
+              web and mobile application development
+            </span>
+            , creating modern, scalable, and user-centric digital solutions. From intuitive
+            user interfaces to{" "}
+            <span className="text-secondary font-semibold">
+              robust cloud-powered backends
+            </span>
+            , I build applications that deliver exceptional performance, seamless user
+            experiences, and real-world impact.
           </motion.p>
 
           {/* CTA Buttons */}

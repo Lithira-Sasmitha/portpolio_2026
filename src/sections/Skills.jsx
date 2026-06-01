@@ -75,7 +75,7 @@ export default function Skills() {
                 />
                 <h3 className="font-outfit font-bold text-lg text-white">{category.name}</h3>
                 <span
-                  className="ml-auto text-xs px-2 py-1 rounded-full font-mono"
+                  className="ml-auto text-xs px-2 py-1 rounded-full font-mono whitespace-nowrap"
                   style={{
                     background: `${category.color}15`,
                     color: category.color,
