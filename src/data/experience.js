@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     role: "Software Engineering Intern",
     company: "Hastiyait (PVT) Ltd",
-    duration: "August 2025 – May 2026",
+    duration: "August 2025 – August 2026",
     type: "Internship",
     description:
       "Contributed to building cross-platform applications, smartwatch companions, real-time synchronization services, and robust cloud configurations.",
