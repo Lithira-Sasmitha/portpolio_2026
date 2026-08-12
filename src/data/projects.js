@@ -1,6 +1,21 @@
 export const projects = [
   {
     id: 1,
+    title: "INVENTORY MANAGEMENT SYSTEM",
+    description:
+      "A comprehensive web platform featuring real-time stock tracking, supplier coordination, automated orders, and detailed analytics dashboards.",
+    longDescription:
+      "Designed and developed a full-featured Inventory Management System to optimize supply chain operations and stock control. The application supports real-time stock level monitoring, supplier directory management, automated purchase ordering, and low-stock alerts. Features interactive charts and dashboards for visualizing inventory valuation and sales analytics over time.",
+    image: null,
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Chart.js"],
+    category: "Full Stack",
+    github: "https://github.com/Lithira-Sasmitha/Inventory_Management_System.git",
+    live: "https://project-ri465.vercel.app/",
+    featured: true,
+    color: "#3b82f6",
+  },
+  {
+    id: 2,
     title: "PRIMEHIVE",
     description:
       "Developed the mobile app and secure Nest.js backend for an IoT Smart Home Security System, featuring real-time device control and telemetry.",
@@ -16,7 +31,7 @@ export const projects = [
     color: "#00d4ff",
   },
   {
-    id: 2,
+    id: 3,
     title: "CEY COIR",
     description:
       "An Enterprise Management System focusing on income/expense state management, salary processing, QR payments, and financial charts.",
@@ -31,7 +46,7 @@ export const projects = [
     color: "#7b2fff",
   },
   {
-    id: 3,
+    id: 4,
     title: "ONLINE MOVIE SYSTEM",
     description:
       "A modular web platform using Java and MVC architecture, featuring CRUD operations, MySQL, and OOP principles.",
@@ -46,7 +61,7 @@ export const projects = [
     color: "#00fff2",
   },
   {
-    id: 4,
+    id: 5,
     title: "3D DEVELOPER PORTFOLIO",
     description:
       "A premium 3D interactive portfolio featuring custom galaxy scenes, mouse parallax, and glassmorphism layouts.",

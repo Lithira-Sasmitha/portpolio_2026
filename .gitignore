@@ -80,7 +80,6 @@ coverage/
 
 # IDEs & Editor Configuration
 
-.vscode/*
 
 !.vscode/extensions.json
 
